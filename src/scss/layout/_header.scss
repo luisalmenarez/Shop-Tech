@@ -1,0 +1,42 @@
+@use "../base/variables" as v;
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin: 1.5rem;
+  font-size: 1.5rem;
+
+  .header__logo {
+    font-size: 3.5rem;
+    margin-left: 4rem;
+    font-weight: bold;
+    a {
+      color: v.$clr-red;
+    }
+  }
+
+  .header__login {
+    display: flex;
+    flex-grow: 1;
+    gap: 2rem;
+    justify-content: end;
+    margin-right: 3rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .link {
+    color: v.$clr-gray;
+    font-weight: bold;
+  }
+
+  .active {
+    color: v.$clr-black;
+  }
+}

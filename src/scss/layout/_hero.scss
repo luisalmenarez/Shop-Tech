@@ -1,0 +1,51 @@
+@use "../base/variables" as v;
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 95%;
+  height: 80vh;
+  background-color: v.$clr-gray;
+  color: v.$clr-black;
+  border-radius: 1rem;
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin: 15rem;
+
+    p {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .hero__wireless {
+      font-size: 7rem;
+    }
+
+    .hero__headphone {
+      color: v.$clr-light;
+      font-size: 14rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .hero__img {
+      position: absolute;
+      z-index: 1;
+      left: 55rem;
+      width: auto;
+      height: auto;
+    }
+  }
+}
