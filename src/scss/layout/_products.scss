@@ -20,6 +20,14 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+    transition: all 500ms;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 1px 1px 0 rgba(160, 160, 160, 0.6), 0 1px 1px 0 rgba(113, 113, 113, 0.6);
+      transform: scale(1.02);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
   }
 
   .card {
@@ -161,5 +169,23 @@
         color: v.$clr-black;
       }
     }
+  }
+}
+
+.secure {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  padding: 3rem;
+  color: v.$clr-black;
+  .bi {
+    font-size: 3rem;
+    color: v.$clr-red;
+  }
+
+  .purchase {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 }
