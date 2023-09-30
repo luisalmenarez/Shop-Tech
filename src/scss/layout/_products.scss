@@ -1,0 +1,165 @@
+@use "../base/variables" as v;
+
+.products {
+  max-width: 100%;
+  width: 95%;
+  color: black;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  grid-template-areas:
+    "item1 item2 item3 item3"
+    "item4 item4 item5 item6";
+
+  .product__item {
+    display: flex;
+    padding: 4rem;
+    border-radius: 2rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+
+    h3 {
+      font-weight: bold;
+      font-size: 3.2rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: v.$clr-light;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    a {
+      width: 50%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+      transition: all 300ms;
+    }
+  }
+
+  .item1 {
+    grid-area: item1;
+    background-color: v.$clr-gray-dark;
+    color: v.$clr-gray;
+    background-image: url(../../../public/img/product1.png);
+  }
+
+  a {
+    color: v.$clr-light;
+    background-color: v.$clr-red;
+    &:hover {
+      background-color: v.$clr-black;
+    }
+  }
+
+  .item2 {
+    grid-area: item2;
+    background-color: v.$clr-yellow;
+    color: v.$clr-gray;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../public/img/product2.png);
+    h3 {
+      color: v.$clr-yellow;
+    }
+
+    a {
+      color: v.$clr-black;
+      background-color: v.$clr-light;
+      &:hover {
+        background-color: v.$clr-black;
+        color: v.$clr-light;
+      }
+    }
+  }
+
+  .item3 {
+    grid-area: item3;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../../public/img/product3.png);
+    background-color: v.$clr-red;
+    background-position: right;
+
+    h3 {
+      color: v.$clr-black;
+    }
+
+    a {
+      color: v.$clr-black;
+      background-color: v.$clr-light;
+      &:hover {
+        background-color: v.$clr-black;
+        color: v.$clr-light;
+      }
+    }
+  }
+
+  .item4 {
+    grid-area: item4;
+    background-image: url(../../../public/img/product4.png);
+    background-color: v.$clr-gray;
+    background-position: right;
+
+    h3 {
+      color: v.$clr-gray-dark;
+    }
+
+    a {
+      color: v.$clr-light;
+      background-color: v.$clr-gray-dark;
+      &:hover {
+        background-color: v.$clr-light;
+        color: v.$clr-black;
+      }
+    }
+  }
+
+  .item5 {
+    grid-area: item5;
+    background-color: v.$clr-gray-dark;
+    color: v.$clr-gray;
+    background-image: url(../../../public/img/product5.png);
+    background-position: right;
+  }
+
+  a {
+    color: v.$clr-light;
+    background-color: v.$clr-red;
+    &:hover {
+      background-color: v.$clr-black;
+      color: v.$clr-light;
+    }
+  }
+
+  .item6 {
+    grid-area: item6;
+    background-color: v.$clr-blue;
+    background-image: url(../../../public/img/product6.png);
+    background-position: right;
+
+    h3 {
+      color: v.$clr-red;
+    }
+
+    a {
+      color: v.$clr-light;
+      background-color: v.$clr-gray-dark;
+      &:hover {
+        background-color: v.$clr-light;
+        color: v.$clr-black;
+      }
+    }
+  }
+}

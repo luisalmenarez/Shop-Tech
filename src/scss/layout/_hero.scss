@@ -2,6 +2,7 @@
 
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -18,31 +19,35 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
+    width: 75%;
     height: 85vh;
 
     .hero__beats {
+      line-height: 1;
       font-size: 3rem;
       font-weight: bold;
       text-align: left;
     }
 
     .hero__wireless {
+      line-height: 1;
       font-size: 7rem;
       font-weight: bold;
       text-align: left;
     }
 
     .hero__headphone {
+      line-height: 1;
       color: v.$clr-light;
       font-size: 12rem;
       font-weight: bold;
+      letter-spacing: 1.5rem;
       text-transform: uppercase;
     }
 
     .hero__img {
       position: absolute;
-      left: 45%;
+      left: 43%;
       min-width: 20%;
       height: 60%;
     }
@@ -64,6 +69,7 @@ main {
 
       p {
         text-align: right;
+        font-size: 1.1rem;
       }
     }
     a {
