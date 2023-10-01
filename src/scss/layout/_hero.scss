@@ -1,91 +1,89 @@
 @use "../base/variables" as v;
+@use "../base/mixins" as mx;
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 }
 
 .hero {
   display: grid;
   place-items: center;
   width: 95%;
+  height: 90vh;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    " . . ."
+    " headphone headphone headphone"
+    "shop . description";
   background-color: v.$clr-gray;
   color: v.$clr-black;
   border-radius: 2rem;
-
-  .hero__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 75%;
-    height: 85vh;
-
-    .hero__beats {
-      line-height: 1;
-      font-size: 3rem;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    .hero__wireless {
-      line-height: 1;
-      font-size: 7rem;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    .hero__headphone {
-      line-height: 1;
-      color: v.$clr-light;
-      font-size: 12rem;
-      font-weight: bold;
-      letter-spacing: 1.5rem;
-      text-transform: uppercase;
-    }
-
-    .hero__img {
-      position: absolute;
-      left: 43%;
-      min-width: 20%;
-      height: 60%;
-    }
+  background-image: url(../../../public/img/hero.png);
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  @include mx.dekstop {
+    height: 75vh;
   }
+  .hero__shop {
+    display: grid;
+    place-items: center;
+    grid-area: shop;
 
-  .hero__description {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .description {
-      display: flex;
-      flex-direction: column;
-      width: 30%;
-      gap: 1rem;
-      text-align: right;
-      margin: 2rem;
-
-      p {
-        text-align: right;
-        font-size: 1.1rem;
-      }
-    }
     a {
-      width: 20%;
-      text-decoration: none;
-      text-align: center;
-      font-size: 2rem;
-      padding: 1rem;
+      font-size: 1.5vw;
+      padding: 2rem 2.5rem;
       color: v.$clr-light;
       background-color: v.$clr-red;
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       transition: all 500ms;
-
       &:hover {
         background-color: v.$clr-black;
       }
     }
+  }
+}
+
+.items {
+  line-height: 1;
+  font-weight: bold;
+}
+
+.hero__container {
+  grid-area: headphone;
+
+  .sony {
+    font-size: 2vw;
+  }
+
+  .wireless {
+    font-size: 4vw;
+  }
+
+  .headphone {
+    font-size: 8vw;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    color: v.$clr-light;
+
+    span {
+      text-shadow: 1rem 1.2rem 0.5rem rgb(0, 0, 0, 0.9);
+    }
+  }
+}
+
+.hero__description {
+  grid-area: description;
+
+  h2 {
+    font-size: 2vw;
+  }
+
+  p {
+    width: 50%;
+    font-size: 1vw;
   }
 }

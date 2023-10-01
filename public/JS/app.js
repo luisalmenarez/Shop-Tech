@@ -9,17 +9,14 @@ open.addEventListener("click", () => {
   if (nav.classList.contains("visible")) {
     // Cierra el menú
     nav.classList.toggle("visible");
-    nav.style.transform = "translateX(100%)"; // Mueve el menú fuera de la pantalla
   } else {
     // Abre el menú
     nav.classList.add("visible");
-    nav.style.transform = "translateX(0)"; // Muestra el menú deslizándolo desde la izquierda
   }
 });
 
 document.addEventListener("click", (e) => {
   if (main.contains(e.target) && e.target !== open) {
     nav.classList.remove("visible");
-    nav.style.transform = "translateX(100%)";
   }
 });
