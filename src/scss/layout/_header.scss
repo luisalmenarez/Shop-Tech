@@ -1,4 +1,5 @@
 @use "../base/variables" as v;
+@use "../base/mixins" as mx;
 
 .header {
   display: flex;
@@ -33,9 +34,8 @@
     li {
       position: relative;
       margin: 0.5rem;
-      font-family: sans-serif;
       cursor: pointer;
-      transition: 500ms all ease;
+      transition: 1s all ease;
 
       &::after {
         content: "";
@@ -66,5 +66,67 @@
 
   .active {
     color: v.$clr-black;
+  }
+}
+
+.open__menu,
+.close__menu {
+  display: none;
+}
+
+@include mx.dekstopSM {
+  .open__menu,
+  .close__menu {
+    display: block;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .open__menu {
+    color: v.$clr-black;
+  }
+
+  .header {
+    .header__logo {
+      text-align: left;
+      font-size: 2.5rem;
+    }
+    justify-content: space-around;
+
+    .header__nav {
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 5%;
+      padding: 7rem;
+      border-radius: 1rem;
+      background-color: v.$clr-light;
+      color: v.$clr-light;
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+      transition: all 0.5s ease;
+    }
+
+    .header__login {
+      margin-right: 1rem;
+      z-index: 1;
+    }
+
+    .visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: end;
   }
 }
