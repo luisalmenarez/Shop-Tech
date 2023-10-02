@@ -1,0 +1,113 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as mx;
+
+.bestSeller__title {
+  display: grid;
+  place-items: center;
+  color: v.$clr-black;
+  text-align: center;
+  padding: 5rem;
+
+  h2 {
+    font-family: v.$secundary-font;
+    font-weight: 900;
+    font-style: italic;
+    color: v.$clr-black;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.sellersCards {
+  width: 95%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5rem;
+  margin: 5rem;
+
+  @include mx.dekstopXL {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  @include mx.tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+.sellersCards__product {
+  .image {
+    display: grid;
+    place-items: center;
+    background-color: v.$clr-gray;
+    background-color: v.$clr-light-gray;
+    padding: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    transition: all 500ms;
+    cursor: pointer;
+    @include mx.tablet {
+      padding: 2rem;
+    }
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .description {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+
+    p {
+      color: v.$clr-black;
+      font-size: 2rem;
+    }
+    h5 {
+      font-size: 2rem;
+      color: v.$clr-black;
+    }
+
+    a {
+      width: 35%;
+      font-size: 1.2rem;
+      font-weight: 900;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      background-color: v.$clr-light-gray;
+      color: v.$clr-black;
+      text-align: center;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+      transition: all 500ms;
+
+      &:hover {
+        color: v.$clr-light;
+        background-color: v.$clr-black;
+      }
+    }
+
+    @include mx.tablet {
+      p {
+        font-size: 1.5rem;
+      }
+      h5 {
+        font-size: 1.5rem;
+      }
+
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+}
