@@ -1,0 +1,25 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as mx;
+
+.limited__promo {
+  width: 95%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "offer . . description";
+  background-color: v.$clr-green;
+  border-radius: 1rem;
+  color: black;
+  padding: 4rem;
+  margin: 3rem;
+  background-image: url(../../../public/img/XboxSeries.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-shadow: 2px 5px 1rem rgba(0, 0, 0, 0.5);
+
+  @include mx.phone {
+    padding: 2rem;
+    margin: 1.5rem;
+  }
+}

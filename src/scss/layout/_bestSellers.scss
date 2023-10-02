@@ -56,6 +56,10 @@
     @include mx.tablet {
       padding: 2rem;
     }
+
+    @include mx.phone {
+      padding: 0.5rem;
+    }
     &:hover {
       transform: scale(1.02);
     }
