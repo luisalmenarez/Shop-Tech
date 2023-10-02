@@ -13,7 +13,9 @@
   grid-template-areas:
     "item1 item2 item3 item3"
     "item4 item4 item5 item6";
-
+  @include mx.tablet {
+    gap: 1rem;
+  }
   @include mx.dekstopSM {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -71,7 +73,9 @@
     line-height: 1;
 
     h3 {
-      font-weight: bold;
+      font-family: v.$secundary-font;
+      font-style: italic;
+      font-weight: 900;
       font-size: 3.2rem;
       text-transform: uppercase;
     }
@@ -79,13 +83,13 @@
     p {
       color: v.$clr-light;
       font-size: 2.5rem;
-      font-weight: bold;
+      font-weight: normal;
     }
 
     a {
       width: 50%;
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: 900;
       padding: 1rem;
       border-radius: 1rem;
       text-align: center;
@@ -120,6 +124,20 @@
         font-size: 1rem;
       }
     }
+
+    @include mx.tablet {
+      h3 {
+        font-size: 1.7rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
   }
 
   .item1 {
@@ -141,7 +159,7 @@
     grid-area: item2;
     background-color: v.$clr-yellow;
     color: v.$clr-gray;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../public/img/product2.png);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../../public/img/product2.png);
     h3 {
       color: v.$clr-yellow;
     }
@@ -158,7 +176,7 @@
 
   .item3 {
     grid-area: item3;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../../public/img/product3.png);
+    background-image: url(../../../public/img/product3.png);
     background-color: v.$clr-red;
     background-position: right;
 
@@ -239,6 +257,7 @@
   justify-content: space-around;
   width: 95%;
   padding: 3rem;
+  margin: 2rem;
   color: v.$clr-black;
   .bi {
     font-size: 3rem;

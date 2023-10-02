@@ -9,9 +9,11 @@
   font-size: 1.5rem;
 
   .header__logo {
+    font-family: v.$secundary-font;
+    font-style: italic;
     font-size: 3.5rem;
     margin-left: 4rem;
-    font-weight: bold;
+    font-weight: 900;
     a {
       color: v.$clr-red;
     }
