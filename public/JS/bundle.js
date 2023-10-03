@@ -1,0 +1,2 @@
+"use strict";const e=document.querySelector(".header__nav"),t=document.querySelector(".open__menu"),s=document.querySelector(".main");t.addEventListener("click",(()=>{e.classList.contains("visible")?e.classList.toggle("visible"):e.classList.add("visible")})),document.addEventListener("click",(i=>{s.contains(i.target)&&i.target!==t&&e.classList.remove("visible")}));
+//# sourceMappingURL=bundle.js.map

@@ -1,17 +1,23 @@
 {
+  "type": "module",
   "name": "ecommerce",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --style=compressed src/scss/main.scss ./public/css/bundle.css --watch"
+    "sass": "sass --style=compressed src/scss/main.scss ./public/css/bundle.css --watch",
+    "build": "rollup --watch --config"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-terser": "^0.4.3",
     "bootstrap-icons": "^1.11.1",
+    "rollup": "^3.29.4",
+    "rollup-plugin-sourcemaps": "^0.6.3",
     "sass": "^1.68.0"
   }
 }
