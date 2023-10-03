@@ -1,0 +1,85 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as mx;
+
+.news {
+  display: grid;
+  color: v.$clr-black;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+  margin-top: 8rem;
+
+  .news__title {
+    margin: 4rem;
+  }
+
+  @include mx.dekstop {
+    margin: 5rem 0 0 0;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-family: v.$secundary-font;
+    font-weight: 900;
+    font-style: italic;
+    color: v.$clr-black;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+    @include mx.phone {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.cards__news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  text-align: left;
+
+  @include mx.dekstop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mx.tablet {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .newsCard {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+
+    .newsCard__description {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      gap: 1rem;
+
+      h5 {
+        font-size: 1.8rem;
+        @include mx.tablet {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        width: 80%;
+        font-size: 1.2rem;
+        @include mx.tablet {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  img {
+    border-radius: 1rem;
+  }
+}
