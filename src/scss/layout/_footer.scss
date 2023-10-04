@@ -1,0 +1,229 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as mx;
+
+.footer {
+  margin-top: 4rem;
+
+  .footer__text {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 2rem;
+    font-size: 1.5rem;
+    gap: 1rem;
+    color: v.$clr-black;
+    @include mx.dekstopSM {
+      place-items: center;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+
+    @include mx.phone {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__text--social {
+      display: flex;
+      gap: 1.5rem;
+
+      .social-link {
+        font-size: 1.8rem;
+        color: v.$clr-black;
+        transition: all 500ms;
+
+        &:hover {
+          color: v.$clr-red;
+        }
+      }
+    }
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      gap: 2rem;
+      @include mx.dekstopSM {
+        padding: 0;
+      }
+      a {
+        text-align: left;
+        color: v.$clr-red;
+        font-family: v.$secundary-font;
+        font-style: italic;
+        font-size: 3rem;
+        font-weight: 900;
+        @include mx.tablet {
+          font-size: 2.3rem;
+        }
+      }
+
+      p {
+        text-align: left;
+        font-size: 1rem;
+      }
+    }
+
+    .footer-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      @include mx.dekstopSM {
+        padding: 0;
+      }
+      h5 {
+        text-align: left;
+        font-family: v.$secundary-font;
+        font-style: italic;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+      ul {
+        display: grid;
+        a {
+          color: v.$clr-black;
+          transition: all 500ms;
+          &:hover {
+            text-decoration: underline;
+            color: v.$clr-red;
+          }
+        }
+      }
+    }
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2.5rem;
+      @include mx.phone {
+        padding: 2rem;
+      }
+      h6 {
+        text-align: left;
+        font-family: v.$secundary-font;
+        font-style: italic;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+    .footer-subscribe {
+      display: grid;
+      gap: 3rem;
+      grid-column: 4/6;
+
+      @include mx.dekstopSM {
+        place-items: center;
+        margin-top: 2rem;
+        gap: 1rem;
+        grid-row: 2;
+        grid-column: 2/2;
+      }
+
+      @include mx.phone {
+        margin: 0;
+      }
+
+      .subscribe-title {
+        display: grid;
+        gap: 2rem;
+
+        @include mx.dekstopSM {
+          place-items: center;
+        }
+
+        h4 {
+          font-size: 1rem;
+        }
+
+        h5 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .subscribe--input {
+        display: flex;
+        align-items: center;
+
+        input {
+          border: none;
+          outline: none;
+          border-radius: 2rem 0 0 2rem;
+          padding: 1.4rem;
+          font-size: 1.4rem;
+          background-color: v.$clr-light-gray;
+        }
+
+        button {
+          border: none;
+          text-align: center;
+          background-color: v.$clr-red;
+          font-size: 1.4rem;
+          padding: 1.4rem;
+          border-radius: 0 2rem 2rem 0;
+          color: v.$clr-black;
+          cursor: pointer;
+          transition: all 600ms;
+
+          &:hover {
+            color: v.$clr-light;
+            background-color: v.$clr-gray-dark;
+          }
+        }
+
+        @include mx.dekstopSM {
+          input {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+          }
+
+          button {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+          }
+        }
+
+        @include mx.phone {
+          input {
+            font-size: 0.8rem;
+          }
+
+          button {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__copy {
+    width: 100%;
+    padding: 3rem;
+    background-color: v.$clr-black;
+
+    p {
+      font-style: italic;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    a {
+      color: v.$clr-light;
+      transition: all 500ms;
+      &:hover {
+        color: v.$clr-red;
+      }
+    }
+
+    @include mx.phone {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
