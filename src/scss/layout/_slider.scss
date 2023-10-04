@@ -1,0 +1,48 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as mx;
+
+.slider__title {
+  h3 {
+    font-size: 3rem;
+    color: black;
+    text-transform: uppercase;
+    font-family: v.$secundary-font;
+    font-weight: 900;
+    font-style: italic;
+  }
+}
+.slider {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin: 5rem;
+  padding: 2rem;
+  overflow: hidden;
+  background-color: v.$clr-light-gray;
+
+  .slide-track {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: scroll 35s linear infinite;
+    width: calc(15rem * 16);
+  }
+
+  .slide {
+    width: 15rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-20rem * 8));
+  }
+}
