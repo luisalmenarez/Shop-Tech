@@ -1,3 +1,4 @@
+import resolve from "rollup-plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
 import sourcemaps from "rollup-plugin-sourcemaps";
 export default {
@@ -7,5 +8,5 @@ export default {
     format: "cjs",
     sourcemap: true,
   },
-  plugins: [terser(), sourcemaps()],
+  plugins: [resolve(), terser(), sourcemaps()],
 };

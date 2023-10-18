@@ -7,7 +7,6 @@
       name="description"
       content="Explore the future of technology all in one place. At Tech Shop, we offer you everything you need to stay connected and enjoy the best technological experience. Welcome to the technological revolution!"
     />
-
     <link rel="stylesheet" href="./public/css/bundle.css" />
     <link rel="shortcut icon" href="./public/img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
@@ -15,7 +14,7 @@
   </head>
   <body>
     <!-- SECCIÓN HEADER -->
-    <header class="header">
+    <header id="header" class="header">
       <div class="header__logo">
         <a href="#">Shop Tech</a>
       </div>
@@ -23,19 +22,17 @@
       <nav class="header__nav">
         <ul>
           <li>
-            <a href="#" class="active link">Home</a>
+            <a href="#header" class="active link">Home</a>
           </li>
           <li>
-            <a href="#" class="link">Shop</a>
+            <a href="#bestSeller" class="link">Shop</a>
           </li>
           <li>
-            <a href="#" class="link">About us</a>
+            <a href="#footer" class="link">About us</a>
           </li>
+
           <li>
-            <a href="#" class="link">Blog</a>
-          </li>
-          <li>
-            <a href="#" class="link">Contact</a>
+            <a href="#footer" class="link">Contact</a>
           </li>
         </ul>
       </nav>
@@ -82,7 +79,7 @@
 
       <!-- PRODUCT SECTION  -->
       <section class="products">
-        <div class="product__item item1">
+        <div class="product__item item1 entry-card">
           <div class="card">
             <p>Enjoy</p>
             <p>With</p>
@@ -184,7 +181,7 @@
       <!-- SECTION SUMMER SALE -->
 
       <!-- BEST SELLERS SECTION -->
-      <section class="bestSeller__title">
+      <section id="bestSeller" class="bestSeller__title">
         <h2>Best Sellers Products</h2>
         <p>Discover the Best-Selling Tech Products: Guaranteed Experience.</p>
       </section>
@@ -398,7 +395,7 @@
       <!-- SLIDER SECTION -->
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <section class="footer__text">
         <div class="footer-logo">
           <a href="#">Tech Shop</a>
@@ -418,19 +415,16 @@
           <nav>
             <ul>
               <li>
-                <a href="#" class="active link">Home</a>
+                <a href="#header" class="active link">Home</a>
               </li>
               <li>
-                <a href="#" class="link">Shop</a>
+                <a href="#bestSeller" class="link">Shop</a>
               </li>
               <li>
-                <a href="#" class="link">About us</a>
+                <a href="#footer" class="link">About us</a>
               </li>
               <li>
-                <a href="#" class="link">Blog</a>
-              </li>
-              <li>
-                <a href="#" class="link">Contact</a>
+                <a href="#footer" class="link">Contact</a>
               </li>
             </ul>
           </nav>
