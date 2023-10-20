@@ -1,7 +1,7 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as mx;
 
-main {
+.main {
   display: grid;
   place-items: center;
 }
@@ -42,7 +42,7 @@ main {
       "shop  description";
   }
 
-  .hero__shop {
+  &__shop {
     display: grid;
     place-items: center;
     grid-area: shop;
@@ -83,7 +83,7 @@ main {
 
   .headphone {
     font-size: 8vw;
-    letter-spacing: 1rem;
+    letter-spacing: 0.8rem;
     text-transform: uppercase;
     font-family: v.$secundary-font;
     font-weight: 900;

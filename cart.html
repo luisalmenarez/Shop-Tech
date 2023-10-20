@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/css/bundle.css" />
+    <link rel="shortcut icon" href="./public/img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <script src="./public/js/bundle.js" defer></script>
+    <title>Shopping / Shop Tech</title>
+  </head>
+  <body>
+    <section class="container">
+      <!-- SECTION HEADER -->
+      <header class="header header__cart">
+        <div class="header__logo cart__logo">
+          <a href="index.html">Shop Tech</a>
+        </div>
+
+        <nav class="header__nav">
+          <ul>
+            <li><a href="index.html" class="header__link">Home</a></li>
+            <li>
+              <a href="#" class="header__link active" data-accion="abrir-carrito">
+                Cart
+                <i class="bi bi-cart-check"></i>
+              </a>
+            </li>
+            <li><a href="#" class="header__link">My account</a></li>
+          </ul>
+        </nav>
+        <button class="open__menu"><i class="bi bi-list"></i></button>
+      </header>
+      <!-- SECTION HEADER -->
+
+      <!-- SECTION BREADCRUMBS -->
+      <main>
+        <section class="breadcrumbs">
+          <a href="/" class="breadcrumbs__link">Home</a>
+          <div class="breadcrumbs__separador">
+            <i class="bi bi-chevron-right breadcrumbs__icon"></i>
+          </div>
+          <a href="/" class="breadcrumbs__link">Headphone</a>
+          <div class="breadcrumbs__separador">
+            <i class="bi bi-chevron-right breadcrumbs__icon"></i>
+          </div>
+          <p href="/" class="breadcrumbs__active">Sony Wireless</p>
+        </section>
+      </main>
+      <!-- SECTION BREADCRUMBS -->
+
+      <!-- SECTION PRODUCT -->
+      <section class="product" id="producto" data-producto-id="1">
+        <div class="product__thumbs">
+          <img src="./public/img/thumbs/black/black1.jpg" alt="" class="product__thumb-img" />
+          <img src="./public/img/thumbs/black/black2.jpg" alt="" class="product__thumb-img" />
+          <img src="./public/img/thumbs/black/black3.jpg" alt="" class="product__thumb-img" />
+          <img src="./public/img/thumbs/black/black4.jpg" alt="" class="product__thumb-img" />
+          <img src="./public/img/thumbs/black/black5.jpg" alt="" class="product__thumb-img" />
+        </div>
+        <div class="product__container-image">
+          <img src="./public/img/products/black1.jpg" alt="" class="product__image" />
+        </div>
+        <div class="product__container-info">
+          <div class="product__stars">
+            <div class="product__star">
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="product__star">
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="product__star">
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="product__star">
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <div class="product__star">
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <h1 class="product__name">Sony Wireless WH-H910N.</h1>
+          <p class="product__description">Exceptional sound quality with a specially designed 30mm diaphragm unit.</p>
+          <div class="product__container-property">
+            <p class="product__property">Price</p>
+            <p class="product__price">$249.99</p>
+          </div>
+          <div class="product__container-property" id="propiedad-color">
+            <p class="product__property">Color</p>
+            <div class="product__container-radios">
+              <label for="black">
+                <input type="radio" class="product__radio-input" name="color" id="black" value="black" checked />
+                <p class="product__radio-text product__radio-text--color product__radio-text--black">Black</p>
+              </label>
+              <label for="silver">
+                <input type="radio" class="product__radio-input" name="color" id="silver" value="silver" />
+                <p class="product__radio-text product__radio-text--color product__radio-text--silver">Silver</p>
+              </label>
+              <label for="blue">
+                <input type="radio" class="product__radio-input" name="color" id="blue" value="blue" />
+                <p class="product__radio-text product__radio-text--color product__radio-text--blue">Blue</p>
+              </label>
+            </div>
+          </div>
+          <div class="product__container-property" id="propiedad-envio">
+            <p class="product__property">Shipping type</p>
+            <div class="product__container-radios">
+              <label for="standard">
+                <input type="radio" class="product__radio-input" name="envio" id="standard" value="standard" checked />
+                <p class="product__radio-text">Standard</p>
+              </label>
+              <label for="express">
+                <input type="radio" class="product__radio-input" name="envio" id="express" value="express" />
+                <p class="product__radio-text">Express</p>
+              </label>
+              <label for="inStore">
+                <input type="radio" class="product__radio-input" name="envio" id="inStore" value="inStore" />
+                <p class="product__radio-text">In-Store</p>
+              </label>
+              <label for="free">
+                <input type="radio" class="product__radio-input" name="envio" id="free" value="free" />
+                <p class="product__radio-text">Free</p>
+              </label>
+            </div>
+          </div>
+          <div class="product__container-property">
+            <p class="product__property">Amount</p>
+            <button class="product__btn-quantity" id="disminuir-cantidad">
+              <i class="bi bi-dash"></i>
+            </button>
+            <input type="text" id="cantidad" value="1" class="product__quantity" />
+            <button class="product__btn-quantity" id="incrementar-cantidad">
+              <i class="bi bi-plus"></i>
+            </button>
+          </div>
+          <button type="submit" class="product__btn-cart" id="agregar-al-carrito">Add to cart</button>
+        </div>
+      </section>
+      <!-- SECTION PRODUCT -->
+    </section>
+  </body>
+</html>

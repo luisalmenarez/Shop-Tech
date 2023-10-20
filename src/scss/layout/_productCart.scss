@@ -1,0 +1,214 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as mx;
+
+.product {
+  background: v.$clr-light;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: v.$shadow;
+  display: grid;
+  color: v.$clr-black;
+  grid-template-columns: 7% 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 4rem;
+
+  @include mx.dekstopSM {
+    padding: 1rem;
+    place-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 1fr 1fr;
+    gap: 0;
+  }
+
+  &__thumbs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    @include mx.dekstopSM {
+      display: grid;
+      grid-auto-flow: column;
+      width: 100%;
+      padding: 2rem;
+      gap: 1rem;
+    }
+  }
+
+  &__thumb-img {
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+  &__container-image {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    @include mx.dekstopSM {
+      width: 70%;
+      height: auto;
+    }
+    @include mx.tablet {
+      width: 85%;
+    }
+
+    @include mx.phone {
+      width: 100%;
+    }
+  }
+
+  &__container-info {
+    padding: 1rem;
+    @include mx.dekstopSM {
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 1px 6px 33px -5px rgba(0, 0, 0, 0.75);
+  }
+
+  &__stars {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__star {
+    color: v.$clr-red;
+  }
+
+  &__name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    @include mx.dekstop {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    color: v.$clr-gray;
+    width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  &__container-property {
+    margin-bottom: 2rem;
+  }
+
+  &__property {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    font-size: 3rem;
+    font-weight: 600;
+    @include mx.dekstop {
+      font-size: 2rem;
+    }
+  }
+
+  &__container-radios {
+    display: flex;
+    gap: 1rem;
+    @include mx.dekstopSM {
+      gap: 2rem;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+    &:checked + p {
+      border: 2px solid v.$clr-black;
+    }
+  }
+
+  &__radio-text {
+    cursor: pointer;
+    padding: 1rem;
+    background: v.$clr-light-gray;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+    position: relative;
+    &--color {
+      padding-left: 3rem;
+      &::after {
+        content: "";
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 1.5rem;
+        position: absolute;
+        top: calc(50% - 7px);
+        left: 1rem;
+        background: #000;
+      }
+    }
+
+    @include mx.dekstop {
+      font-size: 1.2rem;
+    }
+
+    @include mx.dekstopSM {
+      font-size: 1.5rem;
+    }
+
+    &--silver::after {
+      background: #d9d2ca;
+    }
+    &--blue::after {
+      background: #253944;
+    }
+  }
+
+  &__btn-quantity {
+    background: #f5f5f5;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    height: 4rem;
+  }
+
+  &__quantity {
+    height: 4rem;
+    border: none;
+    text-align: center;
+    width: 5rem;
+    font-size: 1.5rem;
+    font-family: v.$secundary-font;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn-cart {
+    height: 5rem;
+    background: v.$clr-black;
+    font-size: 1.5rem;
+    font-family: v.$secundary-font;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 1rem 3rem;
+    transition: 0.3s ease all;
+    &:hover {
+      background: v.$clr-red;
+    }
+  }
+}

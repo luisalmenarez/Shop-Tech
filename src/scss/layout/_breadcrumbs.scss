@@ -1,0 +1,29 @@
+@use "../base/variables" as v;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  &__icon {
+    color: v.$clr-gray;
+  }
+
+  &__link {
+    color: v.$clr-gray;
+    font-size: 1.5rem;
+    transition: all 500ms;
+  }
+
+  &__link:hover {
+    text-decoration: underline;
+  }
+
+  &__active {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: underline;
+    color: v.$clr-black;
+  }
+}
