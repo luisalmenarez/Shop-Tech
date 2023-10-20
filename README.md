@@ -1,7 +1,7 @@
 # Tech Shop.
 Este es un Ecommerce de tecnología realizado con metodología BEM, SCSS y JavaScript
 
-## Tecnologías Utilizadas
+## Tecnologías Utilizadass
 
 ![HTML](https://img.shields.io/badge/-HTML-ff4500?style=flat&logo=html5&logoColor=white)
 ![SCSS Badge](https://img.shields.io/badge/-SCSS-CC6699?style=flat&logo=sass&logoColor=white)
