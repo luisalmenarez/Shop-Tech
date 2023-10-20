@@ -7,6 +7,7 @@ const sonyText = document.querySelector(".sony");
 const wireless = document.querySelector(".wireless");
 const headphone = document.querySelector(".headphone");
 const heroButton = document.querySelector(".hero__shop");
+const productSection = document.querySelector("#producto");
 
 // Define la animación de entrada
 const entryLogo = () => {
@@ -61,6 +62,13 @@ const entryLogo = () => {
     delay: 1.5,
     y: 200,
     ease: "Expo.easeInOut",
+  });
+
+  gsap.from(productSection, 1, {
+    opacity: 0,
+    delay: 1,
+    y: -200,
+    ease: "Expo.Bounce.easeOut",
   });
 };
 
