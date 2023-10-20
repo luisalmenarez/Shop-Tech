@@ -8,12 +8,13 @@
     display: grid;
     place-items: center;
     grid-template-columns: repeat(5, 1fr);
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 6rem;
     font-size: 1.5rem;
     gap: 1rem;
     color: v.$clr-black;
     @include mx.dekstopSM {
       place-items: center;
+      padding: 2rem;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(1, 1fr);
     }
@@ -82,6 +83,7 @@
       }
       ul {
         display: grid;
+        list-style-type: none;
         a {
           color: v.$clr-black;
           transition: all 500ms;
