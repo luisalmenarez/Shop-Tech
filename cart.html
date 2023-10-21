@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <title>Shopping / Shop Tech</title>
   </head>
-  <body>
+  <body class="cart-page">
     <section class="container">
       <!-- SECTION HEADER -->
       <header class="header header__cart">
@@ -17,7 +17,7 @@
         </div>
 
         <nav class="header__nav">
-          <ul>
+          <ul class="nav__ul">
             <li><a href="index.html" class="header__link">Home</a></li>
             <li>
               <a href="#" class="header__link active" data-accion="abrir-carrito">
@@ -33,7 +33,7 @@
       <!-- SECTION HEADER -->
 
       <!-- SECTION BREADCRUMBS -->
-      <main>
+      <main class="main">
         <section class="breadcrumbs">
           <a href="/" class="breadcrumbs__link">Home</a>
           <div class="breadcrumbs__separador">
@@ -45,206 +45,206 @@
           </div>
           <p href="/" class="breadcrumbs__active">Sony Wireless</p>
         </section>
+        <!-- SECTION BREADCRUMBS -->
+
+        <!-- SECTION PRODUCT -->
+        <section class="product" id="producto" data-producto-id="1">
+          <div class="product__thumbs">
+            <img src="./public/img/thumbs/black/black1.jpg" alt="" class="product__thumb-img" />
+            <img src="./public/img/thumbs/black/black2.jpg" alt="" class="product__thumb-img" />
+            <img src="./public/img/thumbs/black/black3.jpg" alt="" class="product__thumb-img" />
+            <img src="./public/img/thumbs/black/black4.jpg" alt="" class="product__thumb-img" />
+            <img src="./public/img/thumbs/black/black5.jpg" alt="" class="product__thumb-img" />
+          </div>
+          <div class="product__container-image">
+            <img src="./public/img/products/black1.jpg" alt="" class="product__image" />
+          </div>
+          <div class="product__container-info">
+            <div class="product__stars">
+              <div class="product__star">
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="product__star">
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="product__star">
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="product__star">
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="product__star">
+                <i class="bi bi-star-fill"></i>
+              </div>
+            </div>
+            <h1 class="product__name">Sony Wireless WH-H910N.</h1>
+            <p class="product__description">Exceptional sound quality with a specially designed 30mm diaphragm unit.</p>
+            <div class="product__container-property">
+              <p class="product__property">Price</p>
+              <p class="product__price">$249.99</p>
+            </div>
+            <div class="product__container-property" id="propiedad-color">
+              <p class="product__property">Color</p>
+              <div class="product__container-radios">
+                <label for="black">
+                  <input type="radio" class="product__radio-input" name="color" id="black" value="black" checked />
+                  <p class="product__radio-text product__radio-text--color product__radio-text--black">Black</p>
+                </label>
+                <label for="silver">
+                  <input type="radio" class="product__radio-input" name="color" id="silver" value="silver" />
+                  <p class="product__radio-text product__radio-text--color product__radio-text--silver">Silver</p>
+                </label>
+                <label for="blue">
+                  <input type="radio" class="product__radio-input" name="color" id="blue" value="blue" />
+                  <p class="product__radio-text product__radio-text--color product__radio-text--blue">Blue</p>
+                </label>
+              </div>
+            </div>
+            <div class="product__container-property" id="propiedad-envio">
+              <p class="product__property">Shipping type</p>
+              <div class="product__container-radios">
+                <label for="standard">
+                  <input type="radio" class="product__radio-input" name="envio" id="standard" value="standard" checked />
+                  <p class="product__radio-text">Standard</p>
+                </label>
+                <label for="express">
+                  <input type="radio" class="product__radio-input" name="envio" id="express" value="express" />
+                  <p class="product__radio-text">Express</p>
+                </label>
+                <label for="inStore">
+                  <input type="radio" class="product__radio-input" name="envio" id="inStore" value="inStore" />
+                  <p class="product__radio-text">In-Store</p>
+                </label>
+                <label for="free">
+                  <input type="radio" class="product__radio-input" name="envio" id="free" value="free" />
+                  <p class="product__radio-text">Free</p>
+                </label>
+              </div>
+            </div>
+            <div class="product__container-property">
+              <p class="product__property">Amount</p>
+              <button class="product__btn-quantity" id="disminuir-cantidad">
+                <i class="bi bi-dash"></i>
+              </button>
+              <input type="text" id="cantidad" value="1" class="product__quantity" />
+              <button class="product__btn-quantity" id="incrementar-cantidad">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+            <button type="submit" class="product__btn-cart" id="agregar-al-carrito">Add to cart</button>
+          </div>
+        </section>
+        <!-- SECTION PRODUCT -->
+
+        <!-- SECTION REVIEW -->
+        <section class="mas-informacion" id="mas-informacion">
+          <div class="tabs">
+            <button class="tabs__button tabs__button--active" data-tab="caracteristicas">Features</button>
+            <button class="tabs__button" data-tab="reseñas">Review</button>
+            <button class="tabs__button" data-tab="envio">Shipping</button>
+          </div>
+          <div class="tab tab--active" id="caracteristicas">
+            <h3 class="tab__title">Features</h3>
+            <ul class="tab__list">
+              <li>Active Noise Cancellation (ANC): The WH-H910N headphones come with high-quality active noise cancellation (ANC) that can block up to 90% of external noise.</li>
+              <li>Ambient Sound Mode: The Ambient Sound Mode allows you to hear the external noise without taking off the headphones.</li>
+              <li>High-Resolution Audio: The WH-H910N supports the LDAC standard, which allows high-resolution audio to be streamed over Bluetooth.</li>
+              <li>NFC Connectivity: The WH-H910N features NFC connectivity, allowing you to pair them with your compatible device with a single touch.</li>
+              <li>Long Battery Life: The WH-H910N provides up to 30 hours of battery life with active noise cancellation enabled.</li>
+            </ul>
+          </div>
+          <div class="tab" id="reseñas">
+            <h3 class="tab__titulo">Reseñas</h3>
+            <div class="review">
+              <img src="./public/img/users/1.jpg" class="review__photo" alt="" />
+              <div class="review__info">
+                <div class="review__stars">
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="review__date">Feb 24, 2023.</p>
+                <p class="reseña__texto">
+                  The Sony WH-XB910N is a mixed bag headset, with an attractive price and feature set. It's way too bassy, and while you can EQ it, it won't sound perfect, and the
+                  touch controls are inconsistent. Noise canceling is good for the price, and optional wired listening is handy
+                </p>
+              </div>
+            </div>
+            <div class="review">
+              <img src="./public/img/users/2.jpg" alt="" class="review__photo" />
+              <div class="review__info">
+                <div class="review__stars">
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="review__date">March 15, 2023.</p>
+                <p class="review__text">The Sony WH-XB910N offers a solid balance between price and features, with pronounced bass and acceptable noise cancellation</p>
+              </div>
+            </div>
+            <div class="review">
+              <img src="./public/img/users/3.jpg" alt="" class="reseña__foto" />
+              <div class="review__info">
+                <div class="review__stars">
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="review__star">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="review__date">April 28, 2023.</p>
+                <p class="review__text">
+                  Sony's WH-XB910N is a budget-friendly headset with impressive bass and decent noise-canceling capabilities, making it a great choice for music lovers on a budget.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="envio">
+            <h3 class="tab__title">Shipping</h3>
+            <p class="tab__paragraph">
+              As part of the launch promotion of our new online store, we offer free shipping throughout Colombia for purchases over $70,000. The delivery time is between 3 and 5
+              business days in Medellín , and 3 to 5 days nationwide. When you fill in your shipping information, select the delivery city, and you will see the estimated delivery
+              time for the product. You can also check our delivery time chart here.
+            </p>
+            <p class="tab__paragraph">To track your order, you can contact TechShop.co Customer Service through various channels.</p>
+          </div>
+        </section>
+        <!-- SECTION REVIEW -->
       </main>
-      <!-- SECTION BREADCRUMBS -->
-
-      <!-- SECTION PRODUCT -->
-      <section class="product" id="producto" data-producto-id="1">
-        <div class="product__thumbs">
-          <img src="./public/img/thumbs/black/black1.jpg" alt="" class="product__thumb-img" />
-          <img src="./public/img/thumbs/black/black2.jpg" alt="" class="product__thumb-img" />
-          <img src="./public/img/thumbs/black/black3.jpg" alt="" class="product__thumb-img" />
-          <img src="./public/img/thumbs/black/black4.jpg" alt="" class="product__thumb-img" />
-          <img src="./public/img/thumbs/black/black5.jpg" alt="" class="product__thumb-img" />
-        </div>
-        <div class="product__container-image">
-          <img src="./public/img/products/black1.jpg" alt="" class="product__image" />
-        </div>
-        <div class="product__container-info">
-          <div class="product__stars">
-            <div class="product__star">
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="product__star">
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="product__star">
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="product__star">
-              <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="product__star">
-              <i class="bi bi-star-fill"></i>
-            </div>
-          </div>
-          <h1 class="product__name">Sony Wireless WH-H910N.</h1>
-          <p class="product__description">Exceptional sound quality with a specially designed 30mm diaphragm unit.</p>
-          <div class="product__container-property">
-            <p class="product__property">Price</p>
-            <p class="product__price">$249.99</p>
-          </div>
-          <div class="product__container-property" id="propiedad-color">
-            <p class="product__property">Color</p>
-            <div class="product__container-radios">
-              <label for="black">
-                <input type="radio" class="product__radio-input" name="color" id="black" value="black" checked />
-                <p class="product__radio-text product__radio-text--color product__radio-text--black">Black</p>
-              </label>
-              <label for="silver">
-                <input type="radio" class="product__radio-input" name="color" id="silver" value="silver" />
-                <p class="product__radio-text product__radio-text--color product__radio-text--silver">Silver</p>
-              </label>
-              <label for="blue">
-                <input type="radio" class="product__radio-input" name="color" id="blue" value="blue" />
-                <p class="product__radio-text product__radio-text--color product__radio-text--blue">Blue</p>
-              </label>
-            </div>
-          </div>
-          <div class="product__container-property" id="propiedad-envio">
-            <p class="product__property">Shipping type</p>
-            <div class="product__container-radios">
-              <label for="standard">
-                <input type="radio" class="product__radio-input" name="envio" id="standard" value="standard" checked />
-                <p class="product__radio-text">Standard</p>
-              </label>
-              <label for="express">
-                <input type="radio" class="product__radio-input" name="envio" id="express" value="express" />
-                <p class="product__radio-text">Express</p>
-              </label>
-              <label for="inStore">
-                <input type="radio" class="product__radio-input" name="envio" id="inStore" value="inStore" />
-                <p class="product__radio-text">In-Store</p>
-              </label>
-              <label for="free">
-                <input type="radio" class="product__radio-input" name="envio" id="free" value="free" />
-                <p class="product__radio-text">Free</p>
-              </label>
-            </div>
-          </div>
-          <div class="product__container-property">
-            <p class="product__property">Amount</p>
-            <button class="product__btn-quantity" id="disminuir-cantidad">
-              <i class="bi bi-dash"></i>
-            </button>
-            <input type="text" id="cantidad" value="1" class="product__quantity" />
-            <button class="product__btn-quantity" id="incrementar-cantidad">
-              <i class="bi bi-plus"></i>
-            </button>
-          </div>
-          <button type="submit" class="product__btn-cart" id="agregar-al-carrito">Add to cart</button>
-        </div>
-      </section>
-      <!-- SECTION PRODUCT -->
-
-      <!-- SECTION REVIEW -->
-      <section class="mas-informacion" id="mas-informacion">
-        <div class="tabs">
-          <button class="tabs__button tabs__button--active" data-tab="caracteristicas">Features</button>
-          <button class="tabs__button" data-tab="reseñas">Review</button>
-          <button class="tabs__button" data-tab="envio">Shipping</button>
-        </div>
-        <div class="tab tab--active" id="caracteristicas">
-          <h3 class="tab__titulo">Features</h3>
-          <ul class="tab__lista">
-            <li>Active Noise Cancellation (ANC): The WH-H910N headphones come with high-quality active noise cancellation (ANC) that can block up to 90% of external noise.</li>
-            <li>Ambient Sound Mode: The Ambient Sound Mode allows you to hear the external noise without taking off the headphones.</li>
-            <li>High-Resolution Audio: The WH-H910N supports the LDAC standard, which allows high-resolution audio to be streamed over Bluetooth.</li>
-            <li>NFC Connectivity: The WH-H910N features NFC connectivity, allowing you to pair them with your compatible device with a single touch.</li>
-            <li>Long Battery Life: The WH-H910N provides up to 30 hours of battery life with active noise cancellation enabled.</li>
-          </ul>
-        </div>
-        <div class="tab" id="reseñas">
-          <h3 class="tab__titulo">Reseñas</h3>
-          <div class="reseña">
-            <img src="./img/users/1.jpg" class="reseña__foto" alt="" />
-            <div class="reseña__info">
-              <div class="reseña__estrellas">
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-              <p class="reseña__fecha">Feb 24, 2023.</p>
-              <p class="reseña__texto">
-                The Sony WH-XB910N is a mixed bag headset, with an attractive price and feature set. It's way too bassy, and while you can EQ it, it won't sound perfect, and the
-                touch controls are inconsistent. Noise canceling is good for the price, and optional wired listening is handy
-              </p>
-            </div>
-          </div>
-          <div class="reseña">
-            <img src="./img/users/2.jpg" alt="" class="reseña__foto" />
-            <div class="reseña__info">
-              <div class="reseña__estrellas">
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-              <p class="reseña__fecha">March 15, 2023.</p>
-              <p class="reseña__texto">The Sony WH-XB910N offers a solid balance between price and features, with pronounced bass and acceptable noise cancellation</p>
-            </div>
-          </div>
-          <div class="reseña">
-            <img src="./img/users/3.jpg" alt="" class="reseña__foto" />
-            <div class="reseña__info">
-              <div class="reseña__estrellas">
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-                <div class="reseña__estrella">
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-              <p class="reseña__fecha">April 28, 2023.</p>
-              <p class="reseña__texto">
-                Sony's WH-XB910N is a budget-friendly headset with impressive bass and decent noise-canceling capabilities, making it a great choice for music lovers on a budget.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="tab" id="envio">
-          <h3 class="tab__titulo">Shipping</h3>
-          <p class="tab__parrafo">
-            As part of the launch promotion of our new online store, we offer free shipping throughout Colombia for purchases over $70,000. The delivery time is between 3 and 5
-            business days in Medellín , and 3 to 5 days nationwide. When you fill in your shipping information, select the delivery city, and you will see the estimated delivery
-            time for the product. You can also check our delivery time chart here.
-          </p>
-          <p class="tab__parrafo">To track your order, you can contact TechShop.co Customer Service through various channels.</p>
-        </div>
-      </section>
-      <!-- SECTION REVIEW -->
     </section>
 
     <footer id="contact" class="footer">
@@ -267,7 +267,7 @@
           <nav>
             <ul>
               <li>
-                <a href="#home" class="active link">Home</a>
+                <a href="index.html" class="active link">Home</a>
               </li>
               <li>
                 <a href="#products" class="link">Shop</a>
@@ -284,8 +284,8 @@
         <div class="footer-contact">
           <h6>Contact</h6>
           <p>Medellín Antioquia - Colombia</p>
-          <p>+57 3001234567</p>
-          <p>+57 3009876542</p>
+          <p>+57 3013897707</p>
+          <p>+57 3002841219</p>
         </div>
         <div class="footer-subscribe">
           <div class="subscribe-title">

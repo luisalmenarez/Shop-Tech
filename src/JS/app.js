@@ -1,2 +1,2 @@
-import "./menu";
 import "./animation";
+import "./menu";

@@ -88,6 +88,7 @@
 .open__menu,
 .close__menu {
   display: none;
+  z-index: 2;
 }
 
 @include mx.dekstopSM {
@@ -137,6 +138,7 @@
     .visible {
       opacity: 1;
       visibility: visible;
+      z-index: 1;
     }
   }
 
