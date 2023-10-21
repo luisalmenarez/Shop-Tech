@@ -1,0 +1,40 @@
+@use "../base/variables" as v;
+
+.notification {
+  background: v.$clr-light;
+  box-shadow: v.$shadow;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: fixed;
+  right: -20rem;
+  bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  transition: 0.3s ease-in all;
+  opacity: 0;
+
+  &.notification--active {
+    right: 4rem;
+    opacity: 1;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__thumb {
+    width: 10rem;
+    border-radius: 0.5rem;
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: 600;
+    color: v.$clr-black;
+  }
+}

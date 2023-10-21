@@ -246,6 +246,61 @@
         <!-- SECTION REVIEW -->
       </main>
     </section>
+    <!-- NOTIFICATION SECTION -->
+    <section class="notification" id="notificacion">
+      <p class="notification__title">Added to cart</p>
+      <img src="./public/img/thumbs/black/black.jpg" alt="" class="notification_thumb" />
+      <a href="#" class="notificacion__link" data-accion="abrir-carrito">View cart.</a>
+    </section>
+    <!-- NOTIFICATION SECTION -->
+
+    <!-- CART SECTION -->
+    <div class="cart" id="carrito">
+      <div class="cart__overlay">
+        <div class="cart__container">
+          <div class="cart__header">
+            <h4 class="cart__title">Cart</h4>
+            <button class="cart__btn-close" data-accion="cerrar-carrito">
+              <i class="bi bi-x"></i>
+            </button>
+          </div>
+          <div class="cart__body">
+            <p class="cart__notice-no-products">There are no products in your cart.</p>
+            <!-- <div class="carrito__producto">
+                  <div class="carrito__producto-info">
+                    <img src="./img/tennis/1.jpg" alt="" class="carrito__thumb" />
+                    <div>
+                      <p class="carrito__producto-nombre">
+                        <span class="carrito__producto-cantidad">1 x </span>Lorem Ipsum Dolot Asimmet
+                      </p>
+                      <p class="carrito__producto-propiedades">
+                        Tamaño:<span>2,5</span> Color:<span>Rojo</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carrito__producto-contenedor-precio">
+                    <button class="carrito__btn-eliminar-item" data-accion="eliminar-item-carrito">
+                      <i class="bi bi-x"></i>
+                    </button>
+                    <p class="carrito__producto-precio">$500.00</p>
+                  </div>
+                </div> -->
+          </div>
+          <div class="cart__footer">
+            <div class="cart__container-total">
+              <div>
+                <p class="cart__label">Total:</p>
+                <p class="cart__total">$0.00</p>
+              </div>
+              <button class="cart__btn-buy" id="carrito__btn-comprar">Buy</button>
+            </div>
+            <div class="cart__container-btn-back" data-accion="cerrar-carrito">
+              <button class="cart__btn-back">Back to the Shop</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer id="contact" class="footer">
       <section class="footer__text">

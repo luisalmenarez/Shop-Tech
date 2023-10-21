@@ -1,0 +1,247 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as mx;
+
+.cart {
+  display: none;
+  color: v.$clr-black;
+
+  &.cart--active {
+    display: block;
+  }
+
+  &__overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(68, 68, 68, 0.7);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__container {
+    margin-top: 5rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 55rem;
+  }
+
+  &__header {
+    padding: 2rem;
+    background: v.$clr-light-gray;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  &__btn-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: v.$clr-gray-dark;
+    border-radius: 1rem;
+    transition: 0.3s ease all;
+
+    .bi {
+      border-radius: 0.5rem;
+      font-size: 2.5rem;
+    }
+  }
+
+  &__btn-close:hover {
+    background-color: v.$clr-red;
+    color: v.$clr-light;
+  }
+
+  &__body {
+    background: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-height: 50vh;
+    overflow-y: scroll;
+
+    @include mx.phone {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+
+  &__notice-no-products {
+    text-align: center;
+    display: none;
+  }
+
+  // Si el carrito tiene la clase vacio.
+  &--empty {
+    // Mostramos el aviso de que no hay productos.
+    .cart__notice-no-products {
+      display: block;
+    }
+  }
+
+  &__product {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid v.$clr-light-gray;
+
+    @include mx.phone {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__product-info {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    @include mx.phone {
+      gap: 1rem;
+    }
+  }
+
+  &__thumb {
+    width: 6.5rem;
+    border-radius: 0.5rem;
+    vertical-align: top;
+    @include mx.phone {
+      width: 4rem;
+    }
+  }
+
+  &__product-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__product-quantity {
+    font-weight: normal;
+  }
+
+  &__product-properties {
+    display: flex;
+    gap: 1rem;
+    color: v.$clr-gray;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+
+    @include mx.phone {
+      font-size: 1.2rem;
+      gap: 0.3rem;
+    }
+  }
+
+  &__product-container-price {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+  }
+
+  &__btn-remove-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    color: v.$clr-gray-dark;
+    transition: 0.3s ease all;
+
+    i {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__btn-remove-item:hover {
+    color: v.$clr-light;
+    background-color: v.$clr-red;
+  }
+
+  &__product-price {
+    font-size: 1.5rem;
+
+    @include mx.phone {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__footer {
+    padding: 2rem;
+    background: v.$clr-light-gray;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  &__container-total {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container-btn-back {
+    display: none;
+    justify-content: center;
+  }
+
+  // Si el carrito tiene la clase vacio.
+  &--empty {
+    // Ocultamos el contenedor total.
+    .cart__container-total {
+      display: none;
+    }
+
+    // Mostramos el contenedor del btn de regresar.
+    .cart__container-btn-back {
+      display: flex;
+    }
+  }
+
+  &__btn-back {
+    background: v.$clr-black;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    transition: all 500ms;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: v.$clr-red;
+      color: v.$clr-black;
+    }
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__total {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  &__btn-buy {
+    background: v.$clr-black;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    transition: 0.2s ease all;
+    border-radius: 0.5rem;
+  }
+
+  &__btn-buy:hover {
+    background: v.$clr-red;
+  }
+}
