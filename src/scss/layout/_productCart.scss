@@ -27,6 +27,12 @@
     align-items: center;
     gap: 3rem;
 
+    img {
+      cursor: pointer;
+      border-radius: 0.5rem;
+      box-shadow: v.$shadow;
+    }
+
     @include mx.dekstopSM {
       display: grid;
       grid-auto-flow: column;
