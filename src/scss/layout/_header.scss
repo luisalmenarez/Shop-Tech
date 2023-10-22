@@ -27,6 +27,11 @@
     a {
       color: v.$clr-red;
     }
+
+    @include mx.phone {
+      margin-left: 1rem;
+      font-size: 3rem;
+    }
   }
 
   &__login {
@@ -36,6 +41,10 @@
     justify-content: end;
     margin-right: 3rem;
     font-weight: 900;
+
+    @include mx.phone {
+      font-size: 1.3rem;
+    }
 
     a {
       color: v.$clr-gray;

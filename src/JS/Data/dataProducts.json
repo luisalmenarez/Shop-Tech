@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Sony Wireless WH-H910N",
+      "description": "Exceptional sound quality with a specially designed 30mm diaphragm unit",
+      "price": 249.99,
+      "colors": ["Black", "Silver", "Blue"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    }
+  ]
+}

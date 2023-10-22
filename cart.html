@@ -20,7 +20,7 @@
           <ul class="nav__ul">
             <li><a href="index.html" class="header__link">Home</a></li>
             <li>
-              <a href="#" class="header__link active" data-accion="abrir-carrito">
+              <a href="#" class="header__link active" data-accion="open-cart">
                 Cart
                 <i class="bi bi-cart-check"></i>
               </a>
@@ -100,7 +100,7 @@
                 </label>
               </div>
             </div>
-            <div class="product__container-property" id="propiedad-envio">
+            <div class="product__container-property" id="property-shipping">
               <p class="product__property">Shipping type</p>
               <div class="product__container-radios">
                 <label for="standard">
@@ -131,19 +131,19 @@
                 <i class="bi bi-plus"></i>
               </button>
             </div>
-            <button type="submit" class="product__btn-cart" id="agregar-al-carrito">Add to cart</button>
+            <button type="submit" class="product__btn-cart" id="add-cart">Add to cart</button>
           </div>
         </section>
         <!-- SECTION PRODUCT -->
 
         <!-- SECTION REVIEW -->
-        <section class="mas-informacion" id="mas-informacion">
+        <section class="mas-informacion" id="more-info">
           <div class="tabs">
-            <button class="tabs__button tabs__button--active" data-tab="caracteristicas">Features</button>
-            <button class="tabs__button" data-tab="reseñas">Review</button>
-            <button class="tabs__button" data-tab="envio">Shipping</button>
+            <button class="tabs__button tabs__button--active" data-tab="features">Features</button>
+            <button class="tabs__button" data-tab="review">Review</button>
+            <button class="tabs__button" data-tab="shipping">Shipping</button>
           </div>
-          <div class="tab tab--active" id="caracteristicas">
+          <div class="tab tab--active" id="features">
             <h3 class="tab__title">Features</h3>
             <ul class="tab__list">
               <li>Active Noise Cancellation (ANC): The WH-H910N headphones come with high-quality active noise cancellation (ANC) that can block up to 90% of external noise.</li>
@@ -153,8 +153,8 @@
               <li>Long Battery Life: The WH-H910N provides up to 30 hours of battery life with active noise cancellation enabled.</li>
             </ul>
           </div>
-          <div class="tab" id="reseñas">
-            <h3 class="tab__titulo">Reseñas</h3>
+          <div class="tab" id="review">
+            <h3 class="tab__title">Review</h3>
             <div class="review">
               <img src="./public/img/users/1.jpg" class="review__photo" alt="" />
               <div class="review__info">
@@ -207,7 +207,7 @@
               </div>
             </div>
             <div class="review">
-              <img src="./public/img/users/3.jpg" alt="" class="reseña__foto" />
+              <img src="./public/img/users/3.jpg" alt="" class="review__photo" />
               <div class="review__info">
                 <div class="review__stars">
                   <div class="review__star">
@@ -233,7 +233,7 @@
               </div>
             </div>
           </div>
-          <div class="tab" id="envio">
+          <div class="tab" id="shipping">
             <h3 class="tab__title">Shipping</h3>
             <p class="tab__paragraph">
               As part of the launch promotion of our new online store, we offer free shipping throughout Colombia for purchases over $70,000. The delivery time is between 3 and 5
@@ -247,44 +247,25 @@
       </main>
     </section>
     <!-- NOTIFICATION SECTION -->
-    <section class="notification" id="notificacion">
+    <section class="notification" id="notification">
       <p class="notification__title">Added to cart</p>
-      <img src="./public/img/thumbs/black/black.jpg" alt="" class="notification_thumb" />
-      <a href="#" class="notificacion__link" data-accion="abrir-carrito">View cart.</a>
+      <img src="./public/img/thumbs/black/black.jpg" alt="" class="notification__thumb" />
+      <a href="#" class="notification__link" data-accion="open-cart">View cart.</a>
     </section>
     <!-- NOTIFICATION SECTION -->
 
     <!-- CART SECTION -->
-    <div class="cart" id="carrito">
+    <div class="cart" id="cart">
       <div class="cart__overlay">
         <div class="cart__container">
           <div class="cart__header">
             <h4 class="cart__title">Cart</h4>
-            <button class="cart__btn-close" data-accion="cerrar-carrito">
+            <button class="cart__btn-close" data-accion="close-cart">
               <i class="bi bi-x"></i>
             </button>
           </div>
           <div class="cart__body">
             <p class="cart__notice-no-products">There are no products in your cart.</p>
-            <!-- <div class="carrito__producto">
-                  <div class="carrito__producto-info">
-                    <img src="./img/tennis/1.jpg" alt="" class="carrito__thumb" />
-                    <div>
-                      <p class="carrito__producto-nombre">
-                        <span class="carrito__producto-cantidad">1 x </span>Lorem Ipsum Dolot Asimmet
-                      </p>
-                      <p class="carrito__producto-propiedades">
-                        Tamaño:<span>2,5</span> Color:<span>Rojo</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="carrito__producto-contenedor-precio">
-                    <button class="carrito__btn-eliminar-item" data-accion="eliminar-item-carrito">
-                      <i class="bi bi-x"></i>
-                    </button>
-                    <p class="carrito__producto-precio">$500.00</p>
-                  </div>
-                </div> -->
           </div>
           <div class="cart__footer">
             <div class="cart__container-total">
@@ -292,15 +273,16 @@
                 <p class="cart__label">Total:</p>
                 <p class="cart__total">$0.00</p>
               </div>
-              <button class="cart__btn-buy" id="carrito__btn-comprar">Buy</button>
+              <button class="cart__btn-buy" id="cart__btn-buy">Buy</button>
             </div>
-            <div class="cart__container-btn-back" data-accion="cerrar-carrito">
+            <div class="cart__container-btn-back" data-accion="close-cart">
               <button class="cart__btn-back">Back to the Shop</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- CART SECTION -->
 
     <footer id="contact" class="footer">
       <section class="footer__text">
@@ -362,5 +344,6 @@
       </section>
     </footer>
     <script src="./public/js/bundle.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
   </body>
 </html>

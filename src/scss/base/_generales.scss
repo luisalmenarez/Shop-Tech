@@ -36,6 +36,16 @@ img {
   margin: auto;
 }
 
+/* CSS personalizado para hacer que la alerta de SweetAlert2 sea más grande */
+.large-swal {
+  font-size: 1.6rem; /* Tamaño de fuente más grande */
+}
+
+/* CSS personalizado para hacer que la animación de confirmación sea más grande */
+.swal2-popup {
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
