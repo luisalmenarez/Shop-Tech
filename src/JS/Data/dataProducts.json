@@ -3,9 +3,81 @@
     {
       "id": "1",
       "name": "Sony Wireless WH-H910N",
+      "img": "./public/img/products/black.jpg",
+      "thumbs": [
+        "./public/img/thumbs/black/black1.jpg",
+        "./public/img/thumbs/black/black2.jpg",
+        "./public/img/thumbs/black/black3.jpg",
+        "./public/img/thumbs/black/black4.jpg",
+        "./public/img/thumbs/black/black5.jpg"
+      ],
       "description": "Exceptional sound quality with a specially designed 30mm diaphragm unit",
       "price": 249.99,
       "colors": ["Black", "Silver", "Blue"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    },
+    {
+      "id": "2",
+      "name": "PS5 Especial Edition",
+      "img": "./public/img/products/PS5.png",
+      "thumbs": [
+        "./public/img/thumbs/silver/silver1.jpg",
+        "./public/img/thumbs/silver/silver2.jpg",
+        "./public/img/thumbs/silver/silver3.jpg",
+        "./public/img/thumbs/silver/silver4.jpg",
+        "./public/img/thumbs/silver/silver5.jpg"
+      ],
+      "description": "Immerse yourself in the future of gaming with the cutting-edge PS5, featuring stunning 4K graphics, lightning-fast load times, and a library of top-tier titles.",
+      "price": 1.199,
+      "colors": ["Black", "Purple", "White"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    },
+    {
+      "id": "3",
+      "name": "Xiaomi Pad 6",
+      "description": "Experience the Xiaomi Pad 6. a sleek and powerful tablet designed for work and play. Enjoy vibrant visuals on a high-resolution display, seamless multitasking, and long-lasting battery life.",
+      "price": 399.99,
+      "colors": ["Black", "Silver", "Blue"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    },
+    {
+      "id": "4",
+      "name": "Galaxy Buds 2 Pro",
+      "description": "Discover the next level of audio performance with Galaxy Buds 2 Pro. Immerse yourself in a world of crystal-clear sound, enhanced by advanced noise cancellation technology. These earbuds are your ideal companion for an unmatched audio experience.",
+      "price": 247.99,
+      "colors": ["Black", "Purple", "White"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    },
+    {
+      "id": "5",
+      "name": "Razer Kraken V3",
+      "description": "Experience the ultimate gaming audio with the Razer Kraken V3. These headphones deliver powerful sound, deep bass, and crystal-clear audio quality, allowing you to hear every detail in your favorite games. Get ready to elevate your gaming experience with the Razer Kraken V3.",
+      "price": 349.99,
+      "colors": ["Black", "Green", "Purple"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    },
+    {
+      "id": "6",
+      "name": "Samsung Galaxy S23 Ultra",
+      "description": "Introducing the Samsung Galaxy S23 Ultra, a flagship smartphone that takes innovation to the next level. With a stunning design, a powerful processor, and an incredible camera system, this device is designed to redefine your smartphone experience. Experience unmatched performance, photography, and more with the Samsung Galaxy S23 Ultra.",
+      "price": 1.499,
+      "colors": ["Cream", "Black", "Green"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    },
+    {
+      "id": "7",
+      "name": "Latop Gaming MSI GF63",
+      "description": "Discover the ultimate gaming experience with the MSI GF63 Gaming Laptop. Featuring powerful hardware and cutting-edge technology, this laptop is designed to deliver top-tier performance and take your gaming to the next level. Enjoy smooth gameplay, stunning visuals, and exceptional sound quality with the MSI GF63 Gaming Laptop.",
+      "price": 1.299,
+      "colors": ["Red", "Black"],
+      "ShippingType": ["Standar", "Express", "Store", "Free"]
+    },
+    {
+      "id": "8",
+      "name": "iPhone 14 Pro Max",
+      "description": "Experience the future with the iPhone 14 Pro Max. This cutting-edge smartphone combines style and innovation, offering a stunning design and a host of advanced features. From its powerful camera system to its lightning-fast performance, the iPhone 14 Pro Max is designed to meet all your needs. Capture breathtaking photos and videos, stay connected, and enjoy a seamless user experience with this exceptional device.",
+      "price": 1.299,
+      "colors": ["Black", "Plate", "Violet"],
       "ShippingType": ["Standar", "Express", "Store", "Free"]
     }
   ]

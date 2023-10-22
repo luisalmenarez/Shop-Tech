@@ -1,3 +1,47 @@
+document.querySelectorAll(".btn__buy").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const productId = button.getAttribute("data-product-id");
+    window.location.href = `cart.html?productId=${productId}`;
+  });
+});
+
+const URL = "./src/JS/data/dataProducts.json";
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get("productId");
+
+// Carga el archivo JSON
+fetch(URL)
+  .then((response) => response.json())
+  .then((data) => {
+    const productsArray = data.products;
+
+    // Busca el producto por ID
+    const selectedProduct = productsArray.find((product) => product.id === productId);
+
+    if (selectedProduct) {
+      // Actualiza la imagen principal
+      const productImage = document.querySelector(".product__image");
+      productImage.src = selectedProduct.img;
+
+      // Crea y agrega las miniaturas
+      const thumbnails = document.querySelectorAll(".product__thumb-img");
+      selectedProduct.thumbs.forEach((thumbnailSrc, index) => {
+        const thumbnail = document.createElement("img");
+        thumbnail.src = thumbnailSrc;
+        thumbnail.alt = `Miniatura ${index + 1}`;
+        thumbnails.appendChild(thumbnail);
+
+        console.log(thumbnailSrc);
+      });
+    }
+  });
+
+/*
+
+
+
+*/
+
 const product = document.getElementById("product");
 const productImage = document.querySelector(".product__image");
 const thumbs = document.querySelector(".product__thumbs");
