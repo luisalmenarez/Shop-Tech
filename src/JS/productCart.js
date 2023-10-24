@@ -14,15 +14,13 @@ let descriptionProductSelected = document.querySelector(".product__description")
 let priceProductSelected = document.querySelector(".product__price");
 let sectionProductSelected = document.querySelector(".breadcrumbs__section");
 let breadcrumbNameProductSelected = document.querySelector(".breadcrumbs__name");
+let firtsColorProductSelected = document.querySelector(".product__radio-text");
+let SecondColorProductSelected = document.querySelector(".product__radio-text");
 const productImage = document.querySelector(".product__image");
 const thumbs = document.querySelector(".product__thumbs");
 /*BOTONTES CANTIDAD*/
-const btnPlus = document.querySelector("#increase-quantity");
-const btnMinus = document.querySelector("#decrease-quantity");
 let inputQuantity = document.querySelector("#quantity");
 /*BOTONTES CANTIDAD*/
-// Selecciona el color
-const colorSelected = product.querySelector("#property-color");
 
 const URL = "./src/JS/data/dataProducts.json";
 const urlParams = new URLSearchParams(window.location.search);
@@ -38,7 +36,7 @@ fetch(URL)
     const selectedProduct = productsArray.find((product) => product.id === productId);
 
     if (selectedProduct) {
-      // Actualiza la imagen principal
+      // Actualiza la imagen principal y los atributos del producto seleccionado
       const productImage = document.querySelector(".product__image");
       productImage.src = selectedProduct.img;
       nameProductSelected.textContent = selectedProduct.name;
@@ -46,16 +44,45 @@ fetch(URL)
       priceProductSelected.textContent = "$" + selectedProduct.price;
       sectionProductSelected.textContent = selectedProduct.section;
       breadcrumbNameProductSelected.textContent = selectedProduct.name;
+      firtsColorProductSelected.textContent = selectedProduct.colors[0];
       const thumbnailsContainer = document.querySelector(".product__thumbs");
       // Elimina las miniaturas existentes
       while (thumbnailsContainer.firstChild) {
         thumbnailsContainer.removeChild(thumbnailsContainer.firstChild);
       }
 
+      const colorOptions = selectedProduct.colors;
+      const colorContainer = document.querySelector(".product__container-radios");
+
+      // Elimina los colores existentes, si los hay
+      while (colorContainer.firstChild) {
+        colorContainer.removeChild(colorContainer.firstChild);
+      }
+
+      colorOptions.forEach((color) => {
+        const label = document.createElement("label");
+        const input = document.createElement("input");
+        const text = document.createElement("p");
+
+        input.type = "radio";
+        input.className = "product__radio-input";
+        input.name = "color";
+        input.id = color.toLowerCase();
+        input.value = color.toLowerCase();
+
+        text.className = `product__radio-text product__radio-text--color product__radio-text--${color.toLowerCase()}`;
+        text.textContent = color;
+
+        label.appendChild(input);
+        label.appendChild(text);
+        colorContainer.appendChild(label);
+      });
+
       // Crea y agrega las miniaturas
       const thumbnails = document.querySelector(".product__thumbs");
       selectedProduct.thumbs.forEach((thumbnailSrc, index) => {
         const thumbnail = document.createElement("img");
+        thumbnail.className = "product__thumb-img";
         thumbnail.src = thumbnailSrc;
         thumbnail.alt = `Miniatura ${index + 1}`;
         thumbnails.appendChild(thumbnail);
@@ -74,37 +101,45 @@ fetch(URL)
           // Extrae el nombre de la imagen a partir de la ruta completa.
           const nameImage = imageSrc.substring(lastIndex + 1);
           // Actualiza la fuente de la imagen principal del producto con la nueva imagen seleccionada.
-          productImage.src = `./public/img/products/${nameImage}`;
+          productImage.src = `./public/img/products/${selectedProduct.id}/${selectedProduct.id}${nameImage}`;
         }
       });
+
+      // Selecciona el color
+      const colorSelected = product.querySelector("#property-color");
 
       // Con esta función actualizo la miniatura del color que se haya seleccionado
       colorSelected.addEventListener("click", (e) => {
         if (e.target.tagName === "INPUT") {
           const color = e.target.value;
-          console.log(color);
-          productImage.src = `./public/img/products/${color}.jpg`;
+          productImage.src = `./public/img/products/${selectedProduct.id}/${selectedProduct.id}${color}.jpg`;
 
           // Cambia las rutas de las miniaturas según el color seleccionado
           const thumbnails = document.querySelectorAll(".product__thumb-img");
           thumbnails.forEach((thumbnail, index) => {
-            thumbnail.src = `./public/img/thumbs/${color}/${color}${index + 1}.jpg`;
+            thumbnail.src = `./public/img/thumbs/${selectedProduct.id}/${color}${index + 1}.jpg`;
           });
         }
       });
     }
   });
 
-// Con esta función incremento en 1 el valor del input siempre que se haga click
-btnPlus.addEventListener("click", (e) => {
-  inputQuantity.value = parseInt(inputQuantity.value) + 1;
-});
+window.addEventListener("load", () => {
+  if (document.body.classList.contains("cart-page")) {
+    // Con esta función incremento en 1 el valor del input siempre que se haga click
+    const btnPlus = document.querySelector("#increase-quantity");
+    btnPlus.addEventListener("click", (e) => {
+      inputQuantity.value = parseInt(inputQuantity.value) + 1;
+    });
 
-// Con esta función disminuyo en 1 el valor del input siempre que se haga click
-btnMinus.addEventListener("click", (e) => {
-  inputQuantity.value = parseInt(inputQuantity.value) - 1;
-  if (parseInt(inputQuantity.value) <= 1) {
-    inputQuantity.value = 1;
+    // Con esta función disminuyo en 1 el valor del input siempre que se haga click
+    const btnMinus = document.querySelector("#decrease-quantity");
+    btnMinus.addEventListener("click", (e) => {
+      inputQuantity.value = parseInt(inputQuantity.value) - 1;
+      if (parseInt(inputQuantity.value) <= 1) {
+        inputQuantity.value = 1;
+      }
+    });
   }
 });
 

@@ -148,20 +148,6 @@
     font-size: 1.5rem;
     border: 2px solid transparent;
     position: relative;
-    &--color {
-      padding-left: 3rem;
-      &::after {
-        content: "";
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 1.5rem;
-        position: absolute;
-        top: calc(50% - 7px);
-        left: 1rem;
-        background: #000;
-      }
-    }
 
     @include mx.dekstop {
       font-size: 1.2rem;
@@ -169,13 +155,6 @@
 
     @include mx.dekstopSM {
       font-size: 1.5rem;
-    }
-
-    &--silver::after {
-      background: #d9d2ca;
-    }
-    &--blue::after {
-      background: #253944;
     }
   }
 

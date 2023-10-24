@@ -3,13 +3,13 @@
     {
       "id": "1",
       "name": "Sony Wireless WH-H910N",
-      "img": "./public/img/products/black.jpg",
+      "img": "./public/img/products/1/1black1.jpg",
       "thumbs": [
-        "./public/img/thumbs/black/black1.jpg",
-        "./public/img/thumbs/black/black2.jpg",
-        "./public/img/thumbs/black/black3.jpg",
-        "./public/img/thumbs/black/black4.jpg",
-        "./public/img/thumbs/black/black5.jpg"
+        "./public/img/thumbs/1/black1.jpg",
+        "./public/img/thumbs/1/black2.jpg",
+        "./public/img/thumbs/1/black3.jpg",
+        "./public/img/thumbs/1/black4.jpg",
+        "./public/img/thumbs/1/black5.jpg"
       ],
       "section": "Headphone",
       "description": "Exceptional sound quality with a specially designed 30mm diaphragm unit",
@@ -19,36 +19,36 @@
     },
     {
       "id": "2",
-      "name": "PS5 Especial Edition",
-      "img": "./public/img/products/PS5Black1.jpg",
+      "name": "PS5 Special Edition",
+      "img": "./public/img/products/2/2purple1.jpg",
       "thumbs": [
-        "./public/img/thumbs/ps5/PS5Black1.jpg",
-        "./public/img/thumbs/ps5/PS5Black2.jpg",
-        "./public/img/thumbs/ps5/PS5Black3.jpg",
-        "./public/img/thumbs/ps5/PS5Black4.jpg",
-        "./public/img/thumbs/ps5/PS5Black5.jpg"
+        "./public/img/thumbs/2/purple1.jpg",
+        "./public/img/thumbs/2/purple2.jpg",
+        "./public/img/thumbs/2/purple3.jpg",
+        "./public/img/thumbs/2/purple4.jpg",
+        "./public/img/thumbs/2/purple5.jpg"
       ],
       "section": "PS5",
       "description": "Immerse yourself in the future of gaming with the cutting-edge PS5, featuring stunning 4K graphics, lightning-fast load times, and a library of top-tier titles.",
       "price": 1.199,
-      "colors": ["Black", "Purple", "White"],
+      "colors": ["Purple", "Black", "White"],
       "ShippingType": ["Standar", "Express", "Store", "Free"]
     },
     {
       "id": "3",
       "name": "iPad Pro 12.9'' ",
-      "img": "./public/img/products/iPadBlack1.jpg",
+      "img": "./public/img/products/3/3gray1.jpg",
       "thumbs": [
-        "./public/img/thumbs/XiaomiPad/iPadBlack1.jpg",
-        "./public/img/thumbs/XiaomiPad/iPadBlack2.jpg",
-        "./public/img/thumbs/XiaomiPad/iPadBlack3.jpg",
-        "./public/img/thumbs/XiaomiPad/iPadBlack4.jpg",
-        "./public/img/thumbs/XiaomiPad/iPadBlack5.jpg"
+        "./public/img/thumbs/3/gray1.jpg",
+        "./public/img/thumbs/3/gray2.jpg",
+        "./public/img/thumbs/3/gray3.jpg",
+        "./public/img/thumbs/3/gray4.jpg",
+        "./public/img/thumbs/3/gray5.jpg"
       ],
-      "description": "Experience the Xiaomi Pad 6. a sleek and powerful tablet designed for work and play. Enjoy vibrant visuals on a high-resolution display, seamless multitasking, and long-lasting battery life.",
+      "description": "Discover the iPad Pro 12.9'', a versatile and powerful tablet designed for both work and play. Immerse yourself in stunning visuals on its high-resolution display, effortlessly multitask with seamless performance, and enjoy extended battery life for your daily tasks and entertainment.",
       "section": "iPad's",
-      "price": 1599,
-      "colors": ["Black", "Silver", "Blue"],
+      "price": 1.599,
+      "colors": ["Gray", "Rose"],
       "ShippingType": ["Standar", "Express", "Store", "Free"]
     },
     {
