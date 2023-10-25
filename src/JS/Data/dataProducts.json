@@ -54,6 +54,14 @@
     {
       "id": "4",
       "name": "Galaxy Buds 2 Pro",
+      "img": "./public/img/products/4/4black1.jpg",
+      "thumbs": [
+        "./public/img/thumbs/4/black1.jpg",
+        "./public/img/thumbs/4/black2.jpg",
+        "./public/img/thumbs/4/black3.jpg",
+        "./public/img/thumbs/4/black4.jpg",
+        "./public/img/thumbs/4/black5.jpg"
+      ],
       "description": "Discover the next level of audio performance with Galaxy Buds 2 Pro. Immerse yourself in a world of crystal-clear sound, enhanced by advanced noise cancellation technology. These earbuds are your ideal companion for an unmatched audio experience.",
       "price": 247.99,
       "section": "Earphone",
