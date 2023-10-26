@@ -70,20 +70,36 @@
     },
     {
       "id": "5",
-      "name": "Razer Kraken V3",
-      "description": "Experience the ultimate gaming audio with the Razer Kraken V3. These headphones deliver powerful sound, deep bass, and crystal-clear audio quality, allowing you to hear every detail in your favorite games. Get ready to elevate your gaming experience with the Razer Kraken V3.",
+      "name": "Logitech G G435",
+      "img": "./public/img/products/5/5black1.jpg",
+      "thumbs": [
+        "./public/img/thumbs/5/black1.jpg",
+        "./public/img/thumbs/5/black2.jpg",
+        "./public/img/thumbs/5/black3.jpg",
+        "./public/img/thumbs/5/black4.jpg",
+        "./public/img/thumbs/5/black5.jpg"
+      ],
+      "description": "Experience the ultimate gaming audio with the Logitech G G435. These headphones deliver powerful sound, deep bass, and crystal-clear audio quality, allowing you to hear every detail in your favorite games. Get ready to elevate your gaming experience with the Razer Kraken V3.",
       "price": 349.99,
       "section": "Headphone",
-      "colors": ["Black", "Green", "Purple"],
+      "colors": ["Black", "Purple"],
       "ShippingType": ["Standar", "Express", "Store", "Free"]
     },
     {
       "id": "6",
       "name": "Samsung Galaxy S23 Ultra",
+      "img": "./public/img/products/6/6black1.jpg",
+      "thumbs": [
+        "./public/img/thumbs/6/black1.jpg",
+        "./public/img/thumbs/6/black2.jpg",
+        "./public/img/thumbs/6/black3.jpg",
+        "./public/img/thumbs/6/black4.jpg",
+        "./public/img/thumbs/6/black5.jpg"
+      ],
       "description": "Introducing the Samsung Galaxy S23 Ultra, a flagship smartphone that takes innovation to the next level. With a stunning design, a powerful processor, and an incredible camera system, this device is designed to redefine your smartphone experience. Experience unmatched performance, photography, and more with the Samsung Galaxy S23 Ultra.",
       "price": 1.499,
       "section": "Phones",
-      "colors": ["Cream", "Black", "Green"],
+      "colors": ["Black", "Cream", "Green"],
       "ShippingType": ["Standar", "Express", "Store", "Free"]
     },
     {
