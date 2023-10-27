@@ -173,10 +173,12 @@ window.addEventListener("load", () => {
 
       //Establecemos la ruta de la imagen que se motrará cuando se preione agregar al carrito
       let srcThumb = product.querySelectorAll(".product__thumb-img")[0].src;
-      if (color === "silver") {
-        srcThumb = "./public/img/thumbs/silver/silver.jpg";
-      } else if (color === "blue") {
-        srcThumb = "./public/img/thumbs/blue/blue.jpg";
+      if (cartProduct.color === 1) {
+        srcThumb = `./public/img/thumbs/${productId}/1.jpg`;
+      } else if (cartProduct.color === 2) {
+        srcThumb = `./public/img/thumbs/${productId}/2.jpg`;
+      } else if (cartProduct.color === 3) {
+        srcThumb = `./public/img/thumbs/${productId}/3.jpg`;
       }
       cartNotification.querySelector("img").src = srcThumb;
 
@@ -186,7 +188,7 @@ window.addEventListener("load", () => {
       // Oculta la notificación después de que hayan pasado 3 segundos
       setTimeout(() => {
         cartNotification.classList.remove("notification--active");
-      }, 2000);
+      }, 5000);
 
       // Guarda cartProduct en localStorage
       localStorage.setItem("cartProduct", JSON.stringify(cartProduct));
