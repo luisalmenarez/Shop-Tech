@@ -1,5 +1,18 @@
 import productsData from "./Data/dataProducts.json";
 
+// Selecciona todos los elementos con la clase "btn__buy" en el documento.
+document.querySelectorAll(".btn__buy").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    // Obtiene el valor del atributo "data-product-id" del botón que se hizo clic.
+    const productId = button.getAttribute("data-product-id");
+    // Redirige a la página "cart.html" pasando el ID del producto como un parámetro en la URL.
+    window.location.href = `cart.html?productId=${productId}`;
+  });
+});
+
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get("productId");
+
 window.addEventListener("load", () => {
   if (document.body.classList.contains("cart-page")) {
     // Selecciona los botones de abrir el carrito por su atributo 'data-accion'.
@@ -42,7 +55,7 @@ window.addEventListener("load", () => {
           /* Se obtiene el precio del archivo dataProducts.json
        siempre y cuando el id del item coincide con el que está en dataProducts.json */
           productsData.products.forEach((productDataBase) => {
-            if (productDataBase.id === cartProduct.id) {
+            if (productDataBase.id === productId) {
               cartProduct.price = productDataBase.price;
 
               total += productDataBase.price * cartProduct.quantity;
@@ -51,12 +64,13 @@ window.addEventListener("load", () => {
 
           // Establece la ruta de la imagen que se quiere mostrar dependiendo de la decisión del usuario
           let thumbSrc = product.querySelectorAll(".product__thumb-img")[0].src;
-          if (cartProduct.color === "silver") {
-            thumbSrc = "./public/img/thumbs/silver/silver.jpg";
-          } else if (cartProduct.color === "blue") {
-            thumbSrc = "./public/img/thumbs/blue/blue.jpg";
-          } else if (cartProduct.color === "black") {
-            thumbSrc = "./public/img/thumbs/black/black.jpg";
+
+          if (cartProduct.color === 1) {
+            thumbSrc = `./public/img/thumbs/${productId}/1.jpg`;
+          } else if (cartProduct.color === 2) {
+            thumbSrc = `./public/img/thumbs/${productId}/2.jpg`;
+          } else if (cartProduct.color === 3) {
+            thumbSrc = `./public/img/thumbs/${productId}/3.jpg`;
           }
           // Genera una plantilla HTML para representar el producto en el carrito.
           let templateProduct = `

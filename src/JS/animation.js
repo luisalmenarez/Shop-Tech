@@ -26,28 +26,24 @@ const animationHome = () => {
 
   gsap.from(sonyText, 1, {
     opacity: 0,
-    delay: 1,
     y: 20,
     ease: "Expo.easeInOut",
   });
 
   gsap.from(wireless, 1, {
     opacity: 0,
-    delay: 1.2,
     y: 20,
     ease: "Expo.easeInOut",
   });
 
   gsap.from(headphone, 2, {
     opacity: 0,
-    delay: 1.5,
     y: -200,
     ease: "Expo.easeInOut",
   });
 
   gsap.from(heroButton, 3, {
     opacity: 0,
-    delay: 1.5,
     y: 200,
     ease: "Expo.easeInOut",
   });

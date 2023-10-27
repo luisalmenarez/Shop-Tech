@@ -59,6 +59,8 @@ fetch(URL)
         colorContainer.removeChild(colorContainer.firstChild);
       }
 
+      let inputIdCounter = 1;
+
       colorOptions.forEach((color) => {
         const label = document.createElement("label");
         const input = document.createElement("input");
@@ -72,10 +74,13 @@ fetch(URL)
 
         text.className = `product__radio-text product__radio-text--color product__radio-text--${color.toLowerCase()}`;
         text.textContent = color;
+        text.id = inputIdCounter;
 
         label.appendChild(input);
         label.appendChild(text);
         colorContainer.appendChild(label);
+
+        inputIdCounter++;
       });
 
       // Crea y agrega las miniaturas
