@@ -105,19 +105,35 @@
     {
       "id": "7",
       "name": "Latop Gaming MSI GF63",
+      "img": "./public/img/products/7/7black1.jpg",
+      "thumbs": [
+        "./public/img/thumbs/7/black1.jpg",
+        "./public/img/thumbs/7/black2.jpg",
+        "./public/img/thumbs/7/black3.jpg",
+        "./public/img/thumbs/7/black4.jpg",
+        "./public/img/thumbs/7/black5.jpg"
+      ],
       "description": "Discover the ultimate gaming experience with the MSI GF63 Gaming Laptop. Featuring powerful hardware and cutting-edge technology, this laptop is designed to deliver top-tier performance and take your gaming to the next level. Enjoy smooth gameplay, stunning visuals, and exceptional sound quality with the MSI GF63 Gaming Laptop.",
       "price": 1.299,
       "section": "Laptops",
-      "colors": ["Red", "Black"],
+      "colors": ["Black"],
       "ShippingType": ["Standar", "Express", "Store", "Free"]
     },
     {
       "id": "8",
       "name": "iPhone 14 Pro Max",
+      "img": "./public/img/products/8/8purple1.jpg",
+      "thumbs": [
+        "./public/img/thumbs/8/purple1.jpg",
+        "./public/img/thumbs/8/purple2.jpg",
+        "./public/img/thumbs/8/purple3.jpg",
+        "./public/img/thumbs/8/purple4.jpg",
+        "./public/img/thumbs/8/purple5.jpg"
+      ],
       "description": "Experience the future with the iPhone 14 Pro Max. This cutting-edge smartphone combines style and innovation, offering a stunning design and a host of advanced features. From its powerful camera system to its lightning-fast performance, the iPhone 14 Pro Max is designed to meet all your needs. Capture breathtaking photos and videos, stay connected, and enjoy a seamless user experience with this exceptional device.",
       "price": 1.299,
       "section": "Phones",
-      "colors": ["Black", "Plate", "Violet"],
+      "colors": ["Purple", "Black", "White"],
       "ShippingType": ["Standar", "Express", "Store", "Free"]
     }
   ]
