@@ -1,4 +1,4 @@
-# Tech Shop.
+# Tech Shop ✨
 
 Esta es una tienda de tenología realizada con HTML, SCSS y JavaScrip puro. 
 Hice uso de la metodología BEM y modularicé tanto el SCSS como el JS para llevar una estructura mucho más organizada del proyecto con el fin de que sea lo más escalable posible.
